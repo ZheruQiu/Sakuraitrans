@@ -190,4 +190,23 @@ i\hbar \frac{\partial}{\partial t}\ket{\alpha,t}=H\ket{\alpha,t_0;t}
 \end{equation}
 这步用了式(\ref{2.1.5})。
 
+如果我们知道了$\cu(t,t_0)$并且知道$\cu(t,t_0)$是怎么作用于初始态矢$\ket{\alpha,t_0}$的，那态矢的Schr\"{o}dinger 方程就用不上了。我们只要把$\cu(t,t_0)$作用到$\ket{\alpha,t_0}$上面就完成了；用这样的方式我们可以得到在任意时间$\ket{t}$的态矢。我们的第一个任务就是导出时间演化算符的Schr\"{o}dinger 方程（式(\ref{2.1.25})）的形式解。这里我们分三种情况处理：
+\begin{enumerate}
+\item {\it 情况1}~~哈密顿算符与时间无关。这意味着就算参数$t$变化了，$H$算符仍保持不变。自旋磁矩与稳恒磁场相互作用的哈密顿量就是一个例子。式(\ref{2.1.25})在这样情况下的解是
+\begin{equation}\label{2.1.28}
+\cu(t,t_0)=\exp\left[\frac{-iH(t-t_0)}{\hbar}\right]。
+\end{equation}
+为了证明它，我们把（式中的）指数如下展开：
+\begin{equation}\label{2.1.29}
+\exp\left[\frac{-iH(t-t_0)}{\hbar}\right]=1+\frac{-iH(t-t_0)}{\hbar}+\left[\frac{{(-i)}^2}{2}\right]{\left[\frac{H(t-t_0)}{\hbar}\right]}^2+\dots ，
+\end{equation}
+因为这个展开式的时间导数是
+\begin{equation}\label{2.1.30}
+\frac{\partial}{\partial t}\exp\left[\frac{-iH(t-t_0)}{\hbar}\right]=\frac{-iH}{\hbar}+\left[\frac{{(-i)}^2}{2}\right]2{\left(\frac{H}{\hbar}\right)}^2 (t-t0)+\dots ，
+\end{equation}
+式(\ref{2.11.28})显然满足微分方程(\ref{2.1.25})。因为$t\rightarrow t_0$时，式(\ref{2.1.28})变成恒等算符，所以边界条件也是满足的。另一个得到式(\ref{2.1.28})的方法是连续地把一系列无限小时间演化算子结合起来，就像我们在式(\ref{1.6.36})里处理有限大平移时一样：
+\begin{equation}\label{2.1.31}
+\lim_{N\rightarrow \infty}{\left[1-\frac{(iH/\hbar)(t-t_0)}{N}\right]}^N=\exp\left[\frac{-iH(t-t_0)}{\hbar}\right]
+\end{equation}
+\end{enumerate}
 \end{document}
